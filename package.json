@@ -1,0 +1,48 @@
+{
+  "name": "potsight",
+  "description": "An open-source frontend for the Potsight API. The Potsight API provides you with a convenient, powerful and simple way to query and broadcast data on the Potcoin network and build your own services with it.",
+  "version": "0.2.6",
+  "author": {
+    "name": "potcoin",
+    "email": "info@potcoin.com"
+  },
+  "repository": "git://github.com/potcoin/potsight.git",
+  "contributors": [
+    {
+      "name": "PC",
+      "email": "dev@potcoin.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/potcoin/potsight/issues"
+  },
+  "homepage": "https://github.com/potcoin/potsight",
+  "license": "MIT",
+  "keywords": [
+    "insight",
+    "blockchain",
+    "blockexplorer",
+    "potcoin",
+    "bitcore",
+    "front-end"
+  ],
+  "scripts": {
+    "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/potsight-api"
+  },
+  "dependencies": {
+    "potsight-api": "git://github.com/potcoin/potsight-api.git"
+  },
+  "devDependencies": {
+    "bower": "~1.2.8",
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.11",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "*",
+    "grunt-macreload": "*",
+    "grunt-css": "~0.5.4",
+    "grunt-markdown": "~0.5.0",
+    "grunt-angular-gettext": "^0.2.15"
+  }
+}
