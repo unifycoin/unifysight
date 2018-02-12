@@ -1,36 +1,36 @@
 {
-  "name": "potsight",
-  "description": "An open-source frontend for the Potsight API. The Potsight API provides you with a convenient, powerful and simple way to query and broadcast data on the Potcoin network and build your own services with it.",
+  "name": "unifysight",
+  "description": "An open-source frontend for the Unifysight API. The Unifysight API provides you with a convenient, powerful and simple way to query and broadcast data on the Unifycoin network and build your own services with it.",
   "version": "0.2.6",
   "author": {
-    "name": "potcoin",
-    "email": "info@potcoin.com"
+    "name": "unifycoin",
+    "email": "info@unifycoin.com"
   },
-  "repository": "git://github.com/potcoin/potsight.git",
+  "repository": "git://github.com/unifycoin/unifysight.git",
   "contributors": [
     {
       "name": "PC",
-      "email": "dev@potcoin.com"
+      "email": "dev@unifycoin.com"
     }
   ],
   "bugs": {
-    "url": "https://github.com/potcoin/potsight/issues"
+    "url": "https://github.com/unifycoin/unifysight/issues"
   },
-  "homepage": "https://github.com/potcoin/potsight",
+  "homepage": "https://github.com/unifycoin/unifysight",
   "license": "MIT",
   "keywords": [
     "insight",
     "blockchain",
     "blockexplorer",
-    "potcoin",
+    "unifycoin",
     "bitcore",
     "front-end"
   ],
   "scripts": {
-    "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/potsight-api"
+    "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/unifysight-api"
   },
   "dependencies": {
-    "potsight-api": "git://github.com/potcoin/potsight-api.git"
+    "unifysight-api": "git://github.com/unifycoin/unifysight-api.git"
   },
   "devDependencies": {
     "bower": "~1.2.8",

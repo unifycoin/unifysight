@@ -1,11 +1,11 @@
-# *potsight*
+ *unifysight*
 
-*Potsight* is an open-source Potcoin blockchain explorer with complete REST and websocket APIs.
-Potsight runs in NodeJS, uses AngularJS for the front-end and LevelDB for storage.
+*Unifysight* is an open-source Unifycoin blockchain explorer with complete REST and websocket APIs.
+Unifysight runs in NodeJS, uses AngularJS for the front-end and LevelDB for storage.
 
-Check some screenshots and more details at [potsight's project homepage](https://github.com/potcoin/potsight).
+Check some screenshots and more details at [unifysight's project homepage](https://github.com/unifycoin/unifysight).
 
-*Potsight* project is now split in two repositories. One for the [API](https://github.com/potcoin/potsight-api)
+*Unifysight* project is now split in two repositories. One for the [API](https://github.com/unifycoin/unifysight-api)
 and for the front-end. This repository is for the front-end, which will install the API as a NPM dependency.
 
 
@@ -19,9 +19,9 @@ and for the front-end. This repository is for the front-end, which will install 
 ## Quick Install
   Check the Prerequisites section above before installing.
 
-  To install potsight, clone the main repository:
+  To install unifysight, clone the main repository:
 
-    $ git clone https://github.com/potcoin/potsight.git && cd potsight
+    $ git clone https://github.com/unifycoin/unifysight.git && cd unifysight
 
   Install dependencies:
 
@@ -35,8 +35,8 @@ and for the front-end. This repository is for the front-end, which will install 
 
     http://localhost:3000
 
-  If *potsight* reports problems connecting to **potcoind** please check the CONFIGURATION section of 
-  [potsight-api README](https://github.com/potcoin/potsight-api/blob/master/README.md). To set the 
+  If *unifysight* reports problems connecting to **unifycoind** please check the CONFIGURATION section of 
+  [unifysight-api README](https://github.com/unifycoin/unifysight-api/blob/master/README.md). To set the 
   environment variables run something like:
   
      $ INSIGHT_NETWORK=livenet BITCOIND_USER=user BITCOIND_PASS=pass INSIGHT_PUBLIC_PATH=public  npm start
@@ -45,17 +45,17 @@ and for the front-end. This repository is for the front-end, which will install 
   Please note that the app will need to sync its internal database
   with the blockchain state, which may take some time. You can check
   sync progress from within the web interface. More details about that process
-  on [potsight-api README](https://github.com/potcoin/potsight-api/blob/master/README.md). 
+  on [unifysight-api README](https://github.com/unifycoin/unifysight-api/blob/master/README.md). 
   
   
 ## Nginx Setup
 
-To use Nginx as a reverse proxy for potsight, use the following base [configuration](https://gist.github.com/matiu/bdd5e55ff0ad90b54261)
+To use Nginx as a reverse proxy for unifysight, use the following base [configuration](https://gist.github.com/matiu/bdd5e55ff0ad90b54261)
 
 
 ## Development
 
-To run potsight locally for development mode:
+To run unifysight locally for development mode:
 
 Install bower dependencies:
 
@@ -75,36 +75,36 @@ There is a convenient Gruntfile.js for automation during editing the code
 $ grunt
 ```
 
-In case you are developing *potsight* and *potsight-api* together, you can do the following:
+In case you are developing *unifysight* and *unifysight-api* together, you can do the following:
 
-* Install potsight and potsight-api on the same path ($IROOT)
+* Install unifysight and unifysight-api on the same path ($IROOT)
 
 ```
-  $ cd $IROOT/potsight
+  $ cd $IROOT/unifysight
   $ grunt
 ```
 
 in other terminal:
 
 ```
-  $ cd $IROOT/potsight-api
-  $ ln -s ../potsight/public
+  $ cd $IROOT/unifysight-api
+  $ ln -s ../unifysight/public
   $ INSIGHT_PUBLIC_PATH=public node insight.js 
 ```
 
 
 ``` 
-INSIGHT_PUBLIC_PATH=potsight/public  grunt
+INSIGHT_PUBLIC_PATH=unifysight/public  grunt
 ```
 
-at potsight-api's home path (edit the path according your setup).
+at unifysight-api's home path (edit the path according your setup).
 
-**also** in the potsight-api path. (So you will have to grunt process running, one for potsight and one for potsight-api).
+**also** in the unifysight-api path. (So you will have to grunt process running, one for unifysight and one for unifysight-api).
 
 
 ## Multilanguage support
 
-potsight use [angular-gettext](http://angular-gettext.rocketeer.be) for
+unifysight use [angular-gettext](http://angular-gettext.rocketeer.be) for
 multilanguage support. 
 
 To enable a text to be translated, add the ***translate*** directive to html tags. See more details [here](http://angular-gettext.rocketeer.be/dev-guide/annotate/). Then, run:
@@ -113,10 +113,10 @@ To enable a text to be translated, add the ***translate*** directive to html tag
 grunt compile
 ```
 
-This action will create a template.pot file in ***po/*** folder. You can open
+This action will create a template.unify file in ***po/*** folder. You can open
 it with some PO editor ([Poedit](http://poedit.net)). Read this [guide](http://angular-gettext.rocketeer.be/dev-guide/translate/) to learn how to edit/update/import PO files from a generated POT file. PO file will be generated inside po/ folder.
 
-If you make new changes, simply run **grunt compile** again to generate a new .pot template and the angular javascript ***js/translations.js***. Then (if use Poedit), open .po file and choose ***update from POT File*** from **Catalog** menu.
+If you make new changes, simply run **grunt compile** again to generate a new .unify template and the angular javascript ***js/translations.js***. Then (if use Poedit), open .po file and choose ***update from POT File*** from **Catalog** menu.
 
 Finally changes your default language from ***public/src/js/config*** 
 
@@ -131,11 +131,11 @@ compile***.
 
 ## Note
 
-For more details about the *potsight-api* configs and end-point, just go to [potsight-api github repository](https://github.com/potcoin/potsight-api) or read the [documentation](https://github.com/potcoin/potsight-api/blob/master/README.md)
+For more details about the *unifysight-api* configs and end-point, just go to [unifysight-api github repository](https://github.com/unifycoin/unifysight-api) or read the [documentation](https://github.com/unifycoin/unifysight-api/blob/master/README.md)
 
 ## Contribute
 
-Contributions and suggestions are welcomed at [potsight github repository](https://github.com/potcoin/potsight).
+Contributions and suggestions are welcomed at [unifysight github repository](https://github.com/unifycoin/unifysight).
 
 
 ## License

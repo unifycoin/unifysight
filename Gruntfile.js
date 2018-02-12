@@ -95,9 +95,9 @@ module.exports = function(grunt) {
       },
     },
     nggettext_extract: {
-      pot: {
+      unify: {
         files: {
-          'po/template.pot': ['public/views/*.html', 'public/views/**/*.html']
+          'po/template.unify': ['public/views/*.html', 'public/views/**/*.html']
         }
       },
     },
