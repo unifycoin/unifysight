@@ -114,9 +114,9 @@ grunt compile
 ```
 
 This action will create a template.unify file in ***po/*** folder. You can open
-it with some PO editor ([Poedit](http://poedit.net)). Read this [guide](http://angular-gettext.rocketeer.be/dev-guide/translate/) to learn how to edit/update/import PO files from a generated POT file. PO file will be generated inside po/ folder.
+it with some PO editor ([Poedit](http://poedit.net)). Read this [guide](http://angular-gettext.rocketeer.be/dev-guide/translate/) to learn how to edit/update/import PO files from a generated UNIFY file. PO file will be generated inside po/ folder.
 
-If you make new changes, simply run **grunt compile** again to generate a new .unify template and the angular javascript ***js/translations.js***. Then (if use Poedit), open .po file and choose ***update from POT File*** from **Catalog** menu.
+If you make new changes, simply run **grunt compile** again to generate a new .unify template and the angular javascript ***js/translations.js***. Then (if use Poedit), open .po file and choose ***update from UNIFY File*** from **Catalog** menu.
 
 Finally changes your default language from ***public/src/js/config*** 
 
