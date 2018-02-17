@@ -34,6 +34,10 @@ angular.module('insight').config(function($routeProvider) {
     when('/status', {
       templateUrl: '/views/status.html',
       title: 'Status'
+    }).
+    when('/ranking', {
+      templateUrl: '/views/ranking.html',
+      title: 'Ranking'
     })
     .otherwise({
       templateUrl: '/views/404.html',
