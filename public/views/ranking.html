@@ -1,4 +1,25 @@
 <div data-ng-include src="'/views/includes/connection.html'"></div>
-<section data-ng-controller="RankingController" data-ng-init="list()">
-
+<section data-ng-controller="transactionsController" data-ng-init="ranking()">
+    <h1>Ranking Top100</h1>
+    <table class="table table-hover table-striped" style="table-layout: fixed">
+        <thead>
+          <tr>
+            <th style="width:100px;">Ranking</th>
+            <th>Address</th>
+            <th class="text-right">Balance(UNIFY)</th>
+            <th class="text-right">Percent</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-show="!ranking.length"><td colspan="4">Waiting for ranking...</td></tr>
+        <tr class="fader" data-ng-repeat='r in ranking'>
+          <td>
+            {{r.index + 1}}
+          </td>
+          <td><a href="/address/{{r.address}}">{{r.address}}</a></td>
+          <td class="text-right">{{r.balance}}</td>
+          <td class="text-right">{{r.percent}}%</td>
+        </tr>
+        </tbody>
+      </table>
 </section>

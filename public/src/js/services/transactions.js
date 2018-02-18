@@ -36,4 +36,8 @@ angular.module('insight.transactions')
   .factory('Transactions',
     function($resource) {
       return $resource('/api/txs');
+  })
+  .factory('Ranking',
+    function($resource) {
+      return $resource('/api/ranking');
   });
