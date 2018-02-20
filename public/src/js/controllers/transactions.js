@@ -170,9 +170,11 @@ angular.module('insight.transactions').controller('transactionsController',
     });
 
     $scope.ranking = [];
+    $scope.rinfo = {};
     $scope.ranking = function () {
       Ranking.get({}, function (res) {
         $scope.ranking = res.ranking;
+        $scope.rinfo = res.info;
       });
     }
   });

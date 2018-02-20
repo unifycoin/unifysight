@@ -1,25 +1,94 @@
 <div data-ng-include src="'/views/includes/connection.html'"></div>
 <section data-ng-controller="transactionsController" data-ng-init="ranking()">
-    <h1>Ranking Top100</h1>
-    <table class="table table-hover table-striped" style="table-layout: fixed">
+  <h1>Ranking Top100</h1>
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <table class="table table-hover table-striped" style="table-layout: fixed">
         <thead>
           <tr>
-            <th style="width:100px;">Ranking</th>
-            <th>Address</th>
-            <th class="text-right">Balance(UNIFY)</th>
-            <th class="text-right">Percent</th>
+            <th style="width:92px;">Ranking</th>
+            <th>
+              <span class="ellipsis">Address</span>
+            </th>
+            <th class="text-right" style="width:196px;">Balance(UNIFY)</th>
+            <th class="text-right hidden-xs" style="width:128px;">Percent</th>
           </tr>
         </thead>
         <tbody>
-        <tr data-ng-show="!ranking.length"><td colspan="4">Waiting for ranking...</td></tr>
-        <tr class="fader" data-ng-repeat='r in ranking'>
-          <td>
-            {{r.index + 1}}
-          </td>
-          <td><a href="/address/{{r.address}}">{{r.address}}</a></td>
-          <td class="text-right">{{r.balance}}</td>
-          <td class="text-right">{{r.percent}}%</td>
-        </tr>
+          <tr data-ng-show="!ranking.length">
+            <td colspan="4">Waiting for ranking...</td>
+          </tr>
+          <tr class="fader" data-ng-repeat='r in ranking'>
+            <td>
+              {{r.index + 1}}
+            </td>
+            <td>
+              <a href="/address/{{r.address}}">
+                <span class="ellipsis">{{r.address}}</span>
+              </a>
+            </td>
+            <td class="text-right">{{r.balance}}</td>
+            <td class="text-right hidden-xs">{{r.percent}}%</td>
+          </tr>
         </tbody>
       </table>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div id="summary-panel" class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Wealth Distribution</h3>
+        </div>
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Amount (UNIFY)</th>
+              <th class="text-center">%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <div style="background-color:#d9534f;width:20px;height:20px;margin-right:6px;" class="pull-left"></div>
+                <span>Top 1-25</span>
+              </th>
+              <td>{{rinfo.sum00}}</td>
+              <td class="text-center">{{rinfo.pc00}}</td>
+            </tr>
+            <tr>
+              <th>
+                <div style="background-color:#5cb85c;width:20px;height:20px;margin-right:6px;" class="pull-left"></div>
+                <span>Top 26-50</span>
+              </th>
+              <td>{{rinfo.sum01}}</td>
+              <td class="text-center">{{rinfo.pc01}}</td>
+            </tr>
+            <tr>
+              <th>
+                <div style="background-color:#428bca;width:20px;height:20px;margin-right:6px;" class="pull-left"></div>
+                <span>Top 51-75</span>
+              </th>
+              <td>{{rinfo.sum02}}</td>
+              <td class="text-center">{{rinfo.pc02}}</td>
+            </tr>
+            <tr>
+              <th>
+                <div style="background-color:#222;width:20px;height:20px;margin-right:6px;" class="pull-left"></div>
+                <span>Top 76-100</span>
+              </th>
+              <td>{{rinfo.sum03}}</td>
+              <td class="text-center">{{rinfo.pc03}}</td>
+            </tr>
+            <tr>
+              <th style="text-align:center;">
+                <span>Total</span>
+              </th>
+              <td>{{rinfo.sum}}</td>
+              <td class="text-center">{{rinfo.pc}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </section>
