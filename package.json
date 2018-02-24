@@ -27,7 +27,7 @@
     "front-end"
   ],
   "scripts": {
-    "start": "INSIGHT_PUBLIC_PATH=public node --max-stack-size=10000 node_modules/.bin/unifysight-api"
+    "start": "INSIGHT_PUBLIC_PATH=public node --max-old-space-size=10240 node_modules/.bin/unifysight-api"
   },
   "dependencies": {
     "bower": "^1.8.2",
